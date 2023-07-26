@@ -3,8 +3,8 @@ import { useState } from "react"
 export default function TextInput({ content, handleChange }) {
     return (
         <section>
-            <form>
-                <label className="inline-block my-4 font-bold">Input:</label>
+            <form className="pt-4">
+                <label className="inline-block mt-4 mb-8 font-bold">Input:</label>
                 <textarea
                     value={content.content}
                     onChange={(e) => handleChange(e.target.value)}
