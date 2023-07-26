@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function FormattedOutput({ content }) {
     const [isCopied, setIsCopied] = useState(false)
 
     const formattedText = content.replaceAll(/[;,]/g, '\n')
+
+    useEffect(() => {
+        setIsCopied(false)
+    }, [content])
 
     function handleCopyClick() {
         navigator.clipboard.writeText(formattedText)
