@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <Navbar />
       <main
-        className={`flex min-h-screen flex-col items-center py-2 px-24 ${inter.className}`}
+        className={`flex py-2 px-24 ${inter.className}`}
       >
         <TextInput content={content} handleChange={handleChange} />
         <FormattedOutput content={content} />
