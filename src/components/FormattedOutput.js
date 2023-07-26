@@ -21,7 +21,13 @@ export default function FormattedOutput({ content }) {
                 <pre className="whitespace-pre-line">{formattedText}</pre>
             </div>
 
-            <button className="bg-green-500 rounded py-2 px-4 my-6 text-white font-bold" onClick={() => handleCopyClick()}>{isCopied ? 'Copied!' : 'Copy results'}</button>
+            <button
+                className={`bg-green-500 rounded py-2 px-4 my-6 text-white font-bold ${content.length === 0 ? 'opacity-50' : ''}`}
+                onClick={() => handleCopyClick()}
+                disabled={content.length === 0}
+            >
+                {isCopied ? 'Copied!' : 'Copy results'}
+            </button>
         </section>
     )
 }
