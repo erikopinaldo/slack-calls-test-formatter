@@ -12,8 +12,8 @@ export default function FormattedOutput({ content }) {
 
     return (
         <section>
+            <h2 className="my-4 font-bold">Output:</h2>
             <div className="bg-gray-200 p-4">
-                <h2 className="font-bold">Output:</h2>
                 <pre className="whitespace-pre-line">{formattedText}</pre>
             </div>
 
